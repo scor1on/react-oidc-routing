@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save react-oidc-routing
+npm install --save react-routing-oidc
 ```
 
 ## Usage

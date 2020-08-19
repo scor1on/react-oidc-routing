@@ -1,6 +1,6 @@
 {
-  "name": "react-oidc-routing",
-  "version": "1.0.1",
+  "name": "react-routing-oidc",
+  "version": "1.0.0",
   "description": "OIDC Client with React Routing",
   "author": "scor1on",
   "license": "MIT",
