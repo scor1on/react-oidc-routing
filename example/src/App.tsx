@@ -1,10 +1,13 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-oidc-routing'
-import 'react-oidc-routing/dist/index.css'
+import { AuthProvider } from 'react-oidc-routing'
+import { BrowserRouter } from 'react-router-dom';
+import { Routes } from './routes/routes';
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <AuthProvider>
+    <BrowserRouter children={Routes} basename={'/'}></BrowserRouter>
+  </AuthProvider>
 }
 
 export default App
