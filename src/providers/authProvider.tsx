@@ -3,9 +3,7 @@
 import React, { Component } from 'react';
 import AuthService from '../services/authService';
 
-const context: Partial<AuthService> = {};
-
-export const AuthContext = React.createContext(context);
+export const AuthContext = React.createContext<AuthService>(new AuthService());
 
 export const AuthConsumer = AuthContext.Consumer;
 

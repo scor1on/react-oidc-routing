@@ -54,6 +54,7 @@ export default class AuthService {
   };
 
   signinRedirect = () => {
+    console.log('Why??');
     localStorage.setItem('redirectUri', window.location.pathname);
     this.UserManager?.signinRedirect({});
   };

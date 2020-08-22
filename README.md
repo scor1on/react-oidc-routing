@@ -1,8 +1,8 @@
-# react-oidc-routing
+# react-routing-oidc
 
 > OIDC Client with React Routing
 
-[![NPM](https://img.shields.io/npm/v/react-oidc-routing.svg)](https://www.npmjs.com/package/react-oidc-routing) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-routing-oidc.svg)](https://www.npmjs.com/package/react-routing-oidc) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
@@ -22,7 +22,19 @@ REACT_APP_REPONSE = 'id_token token'
 ```
 
 ```tsx
-import { Callback, Logout, LogoutCallback, SilentRenew } from 'react-oidc-routing';
+import { AuthProvider } from 'react-routing-oidc'
+
+const App = () => {
+  return <AuthProvider>
+    ...
+  </AuthProvider>
+}
+
+export default App
+```
+
+```tsx
+import { Callback, Logout, LogoutCallback, SilentRenew } from 'react-routing-oidc';
 
 <Route exact={true} path='/signin-callback.html' component={Callback}/>
 <Route exact={true} path='/silent-callback.html' component={SilentRenew} />
@@ -32,7 +44,7 @@ import { Callback, Logout, LogoutCallback, SilentRenew } from 'react-oidc-routin
 Put Routes to your <Switch></Switch>
 
 ```tsx
-import { PrivateRoute } from 'react-oidc-routing';
+import { PrivateRoute } from 'react-routing-oidc';
 <PrivateRoute path='/' component={HomePage} />
 ```
 use PrivateRoute to check OIDC authentification 
